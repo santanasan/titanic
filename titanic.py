@@ -34,6 +34,8 @@ train_data['Ticket_number'] = train_data['Ticket_number'].fillna(0)
 train_data['Age'] = train_data['Age'].fillna('999')
 train_data['Embarked'] = train_data['Embarked'].fillna('999')
 train_data['Fare'] = train_data['Fare'].fillna('0')
+train_data['Relatives'] = train_data['SibSp'] + train_data['Parch']
+
 train_data.head()
 
 
@@ -95,6 +97,7 @@ test_data['Ticket_number'] = test_data['Ticket_number'].fillna(0)
 test_data['Age'] = test_data['Age'].fillna('999')
 test_data['Embarked'] = test_data['Embarked'].fillna('999')
 test_data['Fare'] = test_data['Fare'].fillna('0')
+test_data['Relatives'] = test_data['SibSp'] + test_data['Parch']
 
 test_data.head()
 
